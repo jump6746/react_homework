@@ -5,7 +5,7 @@ import {
   headerIcon,
   headerLogo,
   topBanner,
-} from "/src/components/index.js";
+} from "/src/components/header/index.js";
 
 export default function header() {
   const styles = {
