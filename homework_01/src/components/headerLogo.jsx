@@ -15,15 +15,18 @@ export default function headerLogo(){
       display: "flex",
       alignItems: "center",
     },
+    logoName:{
+      fontSize: "22px",
+    }
   }
 
   return (
     <h1 style={styles.heading_1}>
       <img src={logoData.logoImageSrc} alt={logoData.logoImageAlt}/>
       {slashBar(14, "gray")}
-      <a href="/">{logoData.logoName_1}</a>
+      <a href="/" style={styles.logoName}>{logoData.logoName_1}</a>
       {slashBar(14, "gray")}
-      <a href="/">{logoData.logoName_2}</a>
+      <a href="/" style={styles.logoName}>{logoData.logoName_2}</a>
     </h1>
   );
 }
