@@ -1,19 +1,21 @@
 import React from "react";
 import "/src/styles/header.css";
-import {formInput, headerSign, headerIcon, headerLogo, topBanner} from "/src/components/index.js";
+import {formInput, headerSign, headerIcon, headerLogo, topBanner} from "/src/components/header/index.js";
 
 
 export default function header(){
 
   const styles = {
-    headerWrapper: {
+    headerWrapper:{
+      marginBottom: "20px",
+    },
+    headerContainer: {
       margin: "0 auto",
       paddingTop: "12px",
       width: "1050px",
       display: "flex",
-      flexFlow: "column nowrap" 
+      flexFlow: "column nowrap", 
     },
-    
     headerBottomContainer: {
       display: "flex",
       alignItems: "center",
@@ -24,9 +26,9 @@ export default function header(){
   }
 
   return (
-    <div>
+    <div style={styles.headerWrapper}>
       {topBanner()}
-      <div style={styles.headerWrapper}>
+      <div style={styles.headerContainer}>
         {headerSign()}
         <div style={styles.headerBottomContainer}>
           {headerLogo()}
