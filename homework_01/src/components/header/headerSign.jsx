@@ -1,5 +1,5 @@
 import React from "react";
-import {slashBar} from "/src/components/index.js";
+import {slashBar} from "/src/components/header/index.js";
 
 export default function headerSign(){
 
