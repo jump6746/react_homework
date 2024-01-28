@@ -6,7 +6,9 @@ function ProductImage({id, name}){
   const alt = name;
 
   return(
-    <img src={source} alt={alt} />
+    <div className="image-container">
+      <img src={source} alt={alt} />
+    </div>
   )
 }
 
