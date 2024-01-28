@@ -1,14 +1,20 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 
-console.log(React);
-console.log(React.Component);
-
-class App extends React.Component{
-
+function App(props) {
+  console.log(props);
+  return (
+    <div>
+      <span>123</span>
+    </div>
+  );
 }
 
-const test = new App();
+const rootElement = document.getElementById("header");
+const root = createRoot(rootElement);
 
-console.log(App);
-console.log(test);
+root.render(
+  <App className="hello" id="hi">
+    hi
+  </App>
+);

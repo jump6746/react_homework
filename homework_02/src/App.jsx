@@ -1,15 +1,12 @@
-import ProductContainer from "./components/ProductContainer";
-import ProductSwiper from "./components/ProductSwiper";
+import ProductSwiper from './components/ProductSwiper';
 
-function App(){
-  return(
-    <div id="app">
+function App() {
+  return (
+    <div id="app" className="swiper">
       <h1>React Homework 2</h1>
-      <ul>
-        <ProductSwiper />
-      </ul>
+      <ProductSwiper />
     </div>
-  )
+  );
 }
 
 export default App;
