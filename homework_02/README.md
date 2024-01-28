@@ -125,6 +125,44 @@ function App() {
 export default App;
 ```
 
+### 데이터에 저장되어 있는 빈 값 
+
+데이터에 저장되어 있는 빈 값은 렌더링 하지 않도록 구현해 주었습니다.
+
+```jsx
+import calcDiscountPrice from '../utils/lib/calcDiscountPrice';
+import comma from '../utils/lib/comma';
+
+function ProductInfo({ name, price, discount, brand, label }) {
+  const productTitle = `[${brand}] ${name}`;
+  const discountPrice = calcDiscountPrice(discount, price);
+
+  return (
+    <>
+      <span className="product-title">{productTitle}</span>
+      <span className="product-discount-price">
+        {Number(discount) === 0 ? null : <b>{discount}%</b>}
+        {comma(discountPrice)}원
+      </span>
+      {Number(discount) === 0 ? null : (
+        <span className="product-line-price">{comma(price)}원</span>
+      )}
+      <span className="product-label">{label}</span>
+    </>
+  );
+}
+
+export default ProductInfo;
+```
+
+```jsx
+function ProductTag({ limit }) {
+  return limit === '' ? null : <span className="product-limit">{limit}</span>;
+}
+
+export default ProductTag;
+```
+
 ### 과제를 하면서 느낀점
 
 - 리액트에서 컴포넌트화 하면서 데이터를 불러와 사용하는 법을 알게 되었습니다.
