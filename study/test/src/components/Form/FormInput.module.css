@@ -1,0 +1,23 @@
+.FormLabel {
+
+  --textSize: 20px;
+  --textColor: #000000;
+
+  font-size: var(--textSize);
+  color: var(--textColor);
+
+}
+
+.FormInput {
+
+  --blockSize: 40px;
+  --inlineSize: 150px;
+  --py: 10px;
+  --px: 10px;
+
+  block-size: var(--blockSize);
+  inline-size: var(--inlineSize);
+  padding-block: var(--py);
+  padding-inline: var(--px);
+
+}

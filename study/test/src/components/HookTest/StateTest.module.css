@@ -1,0 +1,16 @@
+.StateTest{
+
+  display: flex;
+  flex-flow: column nowrap;
+
+  span{
+    font-weight: 600;
+    font-size: 40px;
+  }
+
+  button{
+    font-size: 20px;
+    block-size: 40px;
+    inline-size: 40px;
+  }
+}

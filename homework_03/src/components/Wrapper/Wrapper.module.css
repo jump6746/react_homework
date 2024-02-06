@@ -1,0 +1,16 @@
+.Wrapper{
+
+  --display: flex;
+  --direction: row;
+  --wrap: nowrap;
+  --gap: 8px;
+  --marginBlock: 0;
+  --marginInline: 0;
+
+  display: var(--display);
+  flex-flow: var(--direction) var(--wrap);
+  align-items: flex-start;
+  gap: var(--gap);
+  margin: var(--marginBlock) var(--marginInline);
+
+}

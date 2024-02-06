@@ -1,0 +1,16 @@
+.Stack{
+  // Properties
+  __display: flex;
+  __direction: row;
+  __wrap: nowrap;
+  __gap: 8px;
+  __marginBlock: 0;
+  __marginInline: 0;
+
+  // Style
+  display: var(__display);
+  flex-flow: var(__direction) var(__wrap);
+  gap: var(__gap);
+  margin: var(__marginBlock) var(__marginInline);
+
+}

@@ -1,0 +1,9 @@
+.board{
+
+  --size: 150px;
+
+  display: flex;
+  flex-wrap: wrap;
+  inline-size: var(--size);
+
+}
