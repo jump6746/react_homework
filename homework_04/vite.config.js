@@ -6,7 +6,7 @@ export default defineConfig({
   // base: '/likilion-FEQA/',
   plugins: [react()],
   server: {
-    port: 3000, // default: 5173
+    port: 3005, // default: 5173
     open: true, // default: false
   },
   resolve: {

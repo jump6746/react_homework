@@ -26,6 +26,7 @@
 		"eslint-plugin-react": "7.33.2",
 		"eslint-plugin-react-hooks": "4.6.0",
 		"eslint-plugin-storybook": "0.6.15",
+		"pocketbase": "^0.21.1",
 		"postcss": "8.4.33",
 		"postcss-import": "16.0.0",
 		"storybook": "7.6.10",
@@ -36,6 +37,7 @@
 	"dependencies": {
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
+		"react-router-dom": "^6.22.0",
 		"react-tilt": "1.0.2",
 		"vanilla-tilt": "1.8.1"
 	}
