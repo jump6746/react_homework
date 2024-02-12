@@ -2,8 +2,10 @@ import { useState } from 'react';
 import PocketBase from 'pocketbase';
 import classes from '/src/styles/SignIn.module.css';
 import FormInput from '../components/Form/FromInput';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignIn() {
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     emailField: '',
     pwField: '',
@@ -22,8 +24,8 @@ export default function SignIn() {
   async function handleLogin(e) {
     e.preventDefault();
 
-    const emailValue = e.target.emailField.value;
-    const pwValue = e.target.pwField.value;
+    const emailValue = formValues.emailField;
+    const pwValue = formValues.pwField;
     const rememberValue = e.target.rememberId.checked;
 
     try {
@@ -45,6 +47,8 @@ export default function SignIn() {
 
         await localStorage.setItem('rememberInput', inputData);
       }
+
+      navigate('/chatList/');
     } catch {
       alert('아이디 혹은 비밀번호가 틀렸습니다.');
     }
@@ -85,7 +89,7 @@ export default function SignIn() {
         </div>
       </form>
       <a
-        href=""
+        href="/signUp/"
         className="mt-auto w-auto bg-gray-200 text-center p-2 text-lg rounded"
       >
         Create Account

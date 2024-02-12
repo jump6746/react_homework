@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import PocketBase from 'pocketbase';
 import FormInput from '../components/Form/FromInput';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
+  const navigate = useNavigate();
   const [formValues, setFormValues] = useState({
     emailField: '',
     nameField: '',
@@ -54,6 +56,8 @@ export default function SignUp() {
       await pb.collection('kakaoUsers').create(data);
 
       alert('가입 성공');
+
+      navigate('/login/');
     } catch {
       alert('회원가입 중 오류 발생! 잠시 후 다시 시도해주세요.');
     }
